@@ -7,8 +7,6 @@ module.exports = function() {
 
     this.When(/^I request a new card at "([^"]*)"$/, function (url, callback) {
 
-        return callback.pending();
-
         browser.visit(root + url, function() {
             browser.assert.success();
             callback();
@@ -17,8 +15,6 @@ module.exports = function() {
     });
 
     this.Then(/^I should receive a car bingo card$/, function (callback) {
-
-        return callback.pending();
 
         browser.assert.element('table.bingo-card');
         browser.assert.elements('table.bingo-card>tbody>tr', 5);
@@ -29,7 +25,16 @@ module.exports = function() {
     });
 
     this.Given(/^No two images should be the same$/, function (callback) {
-        callback.pending();
+
+        var tds = browser.elements('td.cell');
+
+        tds.forEach(function(td) {
+            tds.forEach(function(check) {
+               expect( td.style.backgroundImage ).to.not.equal( check.style.backgroundImage );
+            });
+        });
+
+        callback();
     });
 
 };
