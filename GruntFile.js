@@ -12,7 +12,7 @@ module.exports = function (grunt) {
             }
         },
         jasmine: {
-            src: ["test/local-frameworks/jquery.js", "public/js/*.js"],
+            src: ["test/assets/jquery.js", "public/js/*.js"],
             options: {
                 specs: "public/test/*.js"
             }

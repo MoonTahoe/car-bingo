@@ -2,7 +2,7 @@ describe("Bingo Card", function () {
 
     describe("loadImages()", function () {
 
-        it("@current - loads images from a api route");
+        it("loads images from a api route");
 
         it("throws error if image route does not return an array");
 
