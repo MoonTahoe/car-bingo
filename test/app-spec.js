@@ -7,4 +7,8 @@ describe("App Routes", function () {
         request(app).get('/').expect(200).end(done);
     });
 
+    it("loads card images as json");
+
+    it("enables cors");
+
 });
