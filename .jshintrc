@@ -11,13 +11,13 @@
     "eqnull"  : true,
     "node"    : true,
     "globals" : {
-        "it"         : false,
+        "it"         : true,
         "xit"        : false,
-        "describe"   : false,
+        "describe"   : true,
         "xdescribe"  : false,
-        "beforeEach" : false,
-        "afterEach"  : false,
-        "expect"     : false,
+        "beforeEach" : true,
+        "afterEach"  : true,
+        "expect"     : true,
         "spyOn"      : false
     }
 }

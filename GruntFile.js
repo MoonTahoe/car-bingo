@@ -5,7 +5,11 @@ module.exports = function (grunt) {
         jshint: {
             all: [
                 "*.js",
-                "*.json"
+                "*.json",
+                "*/*.js",
+                "public/js/*.js",
+                "public/test/*.js",
+                "features/*/*.js"
             ],
             options: {
                 jshintrc: ".jshintrc"
